@@ -1,0 +1,37 @@
+
+#include <stdio.h>
+int main() {
+    float num1, num2;
+    char operation;
+    // Ask user to enter first number
+    printf("Enter first number: ");
+    scanf("%f", &num1);
+    // Ask user to enter second number
+    printf("Enter second number: ");
+    scanf("%f", &num2);
+    // Ask user to choose operation
+    printf("Choose operation (+, -, *, /): ");
+    scanf(" %c", &operation);
+    // Perform operation and print result
+    switch (operation) {
+        case '+':
+            printf("Result = %.2f", num1 + num2);
+            break;
+        case '-':
+            printf("Result = %.2f", num1 - num2);
+            break;
+        case '*':
+            printf("Result = %.2f", num1 * num2);
+            break;
+        case '/':
+            if (num2 != 0) {
+                printf("Result = %.2f", num1 / num2);
+            } else {
+                printf("Error! Division by zero is not allowed.");
+            }
+            break;
+        default:
+            printf("Error! Invalid operation chosen.");
+    }
+    return 0;
+}
